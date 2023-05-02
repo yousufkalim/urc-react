@@ -8,8 +8,8 @@ const api = async (method = 'get', uri, body) => {
   const url = baseUrl + uri;
   return new Promise((resolve, reject) => {
     axios[method](url, body)
-      .then((res) => resolve(res))
-      .catch((err) => {
+      .then(res => resolve(res))
+      .catch(err => {
         if (err?.response?.status === 403) {
           window.location = '/login';
         } else {
