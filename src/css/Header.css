@@ -2,8 +2,13 @@
 .btn:hover {
   color: #837c6b;
 }
+.menuitems {
+  text-transform: capitalize;
+}
 .menuitems:hover {
   background: none !important;
+  color: #fafafa;
+  font-weight: 700;
 }
 .nav.css-11b3ww9-MuiPaper-root-MuiAppBar-root {
   background-color: #191a1f;

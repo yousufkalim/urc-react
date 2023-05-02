@@ -1,25 +1,26 @@
-import React from "react";
-import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import Grid from "@mui/material/Grid";
-import mobile from "../assets/Mobile.png";
-import Typography from "@mui/material/Typography";
-import Avatar from "@mui/material/Avatar";
-import CheckBoxIcon from "@mui/icons-material/CheckBox";
-import { color } from "@mui/system";
-import { CardActionArea } from "@mui/material";
-import "../utils/i18n";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Grid from '@mui/material/Grid';
+import mobile from '../assets/Mobile.png';
+import Typography from '@mui/material/Typography';
+import Avatar from '@mui/material/Avatar';
+
+import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
+import { color } from '@mui/system';
+import { CardActionArea } from '@mui/material';
+import '../utils/i18n';
+import { useTranslation } from 'react-i18next';
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
   padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
+  textAlign: 'center',
+  color: theme.palette.text.secondary
 }));
 
 const Features = ({ cRef }) => {
@@ -27,44 +28,42 @@ const Features = ({ cRef }) => {
   return (
     <div className="feature" ref={cRef}>
       <div className="Features_content">
-        <div className="feat1">{t("App Features")}</div>
+        <div className="feat1">{t('App Features')}</div>
         <div className="feat2">
-        {t("Economic services provided by the finance industry, which encompasses")}<br></br> {t("a broad range of businesses that manage money, including credit unions.")}
-          
+          {t(
+            'The app could offer different modes of racing, such as time trial, head-to-head, or championship races.'
+          )}
+          <br></br> {t(' The app could track users progress and rank them against other players.')}
         </div>
       </div>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container columns={12} className="maingrid">
           <Grid item xs={12} sm={12} md={6} className="grid1">
             <div className="featimg">
-              <img
-                src={mobile}
-                style={{ width: "44vw" }}
-                className="app_mobile_img"
-              />
+              <img src={mobile} style={{ width: '44vw' }} className="app_mobile_img" />
             </div>
           </Grid>
 
           <Grid item xs={12} sm={12} md={6} margin="auto">
             <Card
               sx={{
-                backgroundColor: "#262626",
+                backgroundColor: '#262626'
               }}
-              className="message"
-            >
+              className="message">
               <CardActionArea>
                 <CardContent
-                  sx={{ display: "flex", justifyContent: "flex-start" }}
-                  className="cardcontent"
-                >
-                  <CheckBoxIcon className="checkbox" />
+                  sx={{ display: 'flex', justifyContent: 'flex-start' }}
+                  className="cardcontent">
+                  <CheckCircleRoundedIcon sx={{ borderRadius: '50px' }} className="checkbox" />
                   <div className="heading">
-                    <p className="card_title">{t("CREATIVE DESIGN")}</p>
+                    <p className="card_title">{t('CREATIVE DESIGN')}</p>
                   </div>
                 </CardContent>
                 <div className="plaintext">
                   <p className="card_p">
-                  {t("Creativity is the act of turning new and imaginative ideas into reality. Creativity involves two processes: thinking, then producing. Innovation is the production or implementation of an idea.")}
+                    {t(
+                      'Creativity is the act of turning new and imaginative ideas into reality. Creativity involves two processes: thinking, then producing. Innovation is the production or implementation of an idea.'
+                    )}
                   </p>
                 </div>
               </CardActionArea>
@@ -72,23 +71,23 @@ const Features = ({ cRef }) => {
             <br />
             <Card
               sx={{
-                backgroundColor: "#262626",
+                backgroundColor: '#262626'
               }}
-              className="message"
-            >
+              className="message">
               <CardActionArea>
                 <CardContent
-                  sx={{ display: "flex", justifyContent: "flex-start" }}
-                  className="cardcontent2"
-                >
-                  <CheckBoxIcon className="checkbox" />
+                  sx={{ display: 'flex', justifyContent: 'flex-start' }}
+                  className="cardcontent2">
+                  <CheckCircleRoundedIcon className="checkbox" />
                   <div className="heading">
-                    <p className="card_title">{t("EASY TO USE")}</p>
+                    <p className="card_title">{t('EASY TO USE')}</p>
                   </div>
                 </CardContent>
                 <div className="plaintext">
                   <p className="card_p">
-                  {t("It's an easy-to-use application and it's a nice model for building a personalized web experience.")}
+                    {t(
+                      "It's an easy-to-use application and it's a nice model for building a personalized web experience."
+                    )}
                   </p>
                 </div>
               </CardActionArea>
@@ -96,24 +95,23 @@ const Features = ({ cRef }) => {
             <br />
             <Card
               sx={{
-                backgroundColor: "#262626",
+                backgroundColor: '#262626'
               }}
-              className="message"
-            >
+              className="message">
               <CardActionArea>
                 <CardContent
-                  sx={{ display: "flex", justifyContent: "flex-start" }}
-                  className="cardcontent3"
-                >
-                  <CheckBoxIcon className="checkbox" />
+                  sx={{ display: 'flex', justifyContent: 'flex-start' }}
+                  className="cardcontent3">
+                  <CheckCircleRoundedIcon className="checkbox" />
                   <div className="heading">
-                    <p className="card_title">{t("BETTER USE EXPERIENCE")}</p>
+                    <p className="card_title">{t('BETTER USE EXPERIENCE')}</p>
                   </div>
                 </CardContent>
                 <div className="plaintext">
                   <p className="card_p">
-                 {t ("The goal of user experience design is to improve customer satisfaction and loyalty through the utility, ease of use, and pleasure provided in the interaction with a product")}
-
+                    {t(
+                      'The goal of user experience design is to improve customer satisfaction and loyalty through the utility, ease of use, and pleasure provided in the interaction with a product'
+                    )}
                   </p>
                 </div>
               </CardActionArea>

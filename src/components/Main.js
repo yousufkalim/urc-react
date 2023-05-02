@@ -1,49 +1,49 @@
-import React from "react";
-import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
-import Apple from "../images/Apple.png";
-import Google from "../images/Google.png";
-import MockupBG from "../assets/MockupBG.png";
-import phones from "../images/phones.svg";
-import "../utils/i18n";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import Apple from '../images/Apple.png';
+import Google from '../images/Google.png';
+import MockupBG from '../assets/MockupBG.png';
+import phones from '../images/phones.svg';
+import '../utils/i18n';
+import { useTranslation } from 'react-i18next';
 
 const Item = styled(Paper)(({ theme }) => ({
   // backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
   padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
+  textAlign: 'center',
+  color: theme.palette.text.secondary
 }));
 
 const Main = ({ cRef }) => {
-    const { i18n, t } = useTranslation();
+  const { i18n, t } = useTranslation();
   return (
     <Box sx={{ flexGrow: 1 }} ref={cRef}>
       <Grid container columns={12} className="maingrid">
         <Grid item xs={12} sm={12} md={5} className="grid1">
           <div className="container">
             <div className="text">
-             {t("WE PROVIDE")} <br />
-             {t("GREAT SERVICES")}
+              {t('URC')} <br />
+              {t('Car Racing Game')}
             </div>
 
             <div className="line">
               <hr
                 style={{
-                  border: "none",
+                  border: 'none'
                 }}
               />
             </div>
             <div className="text1">
-{t ("Software House with a team of experienced")}
-              <br /> {t("developers and project managers.")}
+              {t('Welcome to the high-octane world of car')}
+              <br /> {t('racing this is a race you will always remember.')}
               <br />
-              {t ("We provide ourselves in delivering high-")}
+              {t('The excitement is in the air as the drivers')}
               <br />
-              {t("quality work for our partners.")}
+              {t(' line up on the starting grid.')}
             </div>
             <br />
 
@@ -59,8 +59,7 @@ const Main = ({ cRef }) => {
           sm={12}
           md={7}
           className="grid2"
-          sx={{ position: "relative", left: 0, top: 0 }}
-        >
+          sx={{ position: 'relative', left: 0, top: 0 }}>
           <div className="main_mobile_bg_div">
             <img src={MockupBG} className="bgimg" />
           </div>

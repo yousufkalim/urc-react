@@ -1,18 +1,19 @@
-import React from "react";
-import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
-import quote from "../images/quote.svg";
-import "../utils/i18n";
-import { useTranslation } from "react-i18next";
+import React, { useState } from 'react';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import quote from '../images/quote.svg';
+import '../utils/i18n';
+import { useTranslation } from 'react-i18next';
+import { toast } from 'react-toastify';
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
   padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
+  textAlign: 'center',
+  color: theme.palette.text.secondary
 }));
 
 const Contactus = ({ cRef }) => {
@@ -20,31 +21,30 @@ const Contactus = ({ cRef }) => {
   // const scroll=()=>{
   //     myRef.current.scrollIntoView({behavior:"smooth", block:"start"})
   // }
+
   return (
     <Box sx={{ flexGrow: 1 }} ref={cRef}>
       <Grid container columns={12} className="maingrid">
         <Grid item xs={12} sm={12} md={6} className="grid1">
           <div className="container1">
             <div className="contactus_headings">
-              <div className="text2">{t("Get a Quote")}</div>
+              <div className="text2">{t('Get a Quote')}</div>
               <div className="line1">
                 <hr
                   style={{
-                    border: "none",
+                    border: 'none'
                   }}
                 />
               </div>
 
               <div className="text3">
-              {t("The information you share on this form is used to prepare your quote and contact you regarding our services. We will not share your information with outside parties.")}
+                {t(
+                  'The information you share on this form is used to prepare your quote and contact you regarding our services. We will not share your information with outside parties.'
+                )}
               </div>
             </div>
             <div className="imgquote">
-              <img
-                src={quote}
-                style={{ width: "32vw" }}
-                className="qoute_img"
-              />
+              <img src={quote} style={{ width: '32vw' }} className="qoute_img" />
             </div>
           </div>
         </Grid>
@@ -56,7 +56,7 @@ const Contactus = ({ cRef }) => {
                   type="email"
                   class="form-control row1"
                   id="inputName4"
-                  placeholder={t("Your Name")}
+                  placeholder={t('Your Name')}
                 />
               </div>
               <div className="form-group col-md-6">
@@ -64,7 +64,7 @@ const Contactus = ({ cRef }) => {
                   type="password"
                   class="form-control row2"
                   id="inputEmail4"
-                  placeholder={t("Email")}
+                  placeholder={t('Email')}
                 />
               </div>
             </div>
@@ -74,7 +74,7 @@ const Contactus = ({ cRef }) => {
                   type="email"
                   class="form-control row3"
                   id="inputPhone4"
-                  placeholder={t("Phone")}
+                  placeholder={t('Phone')}
                 />
               </div>
               <div className="form-group col-md-6">
@@ -82,7 +82,7 @@ const Contactus = ({ cRef }) => {
                   type="password"
                   class="form-control row4"
                   id="inputBudget4"
-                  placeholder={t("Budget")}
+                  placeholder={t('Budget')}
                 />
               </div>
             </div>
@@ -92,23 +92,25 @@ const Contactus = ({ cRef }) => {
                 type="comment"
                 class="form-control row5"
                 id="Message"
-                placeholder={t("Type Your Message")}
+                placeholder={t('Type Your Message')}
               />
             </div>
             <button
               className="btn1"
               variant="text"
+              onClick={() => {
+                toast.success('Submitted');
+              }}
               style={{
-                borderRadius: "56px",
+                borderRadius: '56px',
                 // width: "200px",
                 // height: "45px",
-                border: "none",
-                fontSize: "18px",
-                fontWeight: "600px",
-              }}
-            >
-              {" "}
-              <a href="#"> {t("Send")}</a>{" "}
+                border: 'none',
+                fontSize: '18px',
+                fontWeight: '600px'
+              }}>
+              {' '}
+              <a href="#"> {t('Send')}</a>
             </button>
           </form>
         </Grid>

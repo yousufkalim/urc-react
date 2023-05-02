@@ -2,20 +2,23 @@
   color: #fafafa;
   margin: 10vh;
   margin-top: 25vh;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
+}
+.submitt_msg {
+  color: white;
 }
 
 .text2 {
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-weight: 700;
   font-size: 34px;
   line-height: 44px;
 }
 .line1 {
-  width: 25vh;
+  width: 20vh;
   height: 1vh;
-  background: #837c6b;
+  background: #91834c;
   border-radius: 13px;
 }
 .text3 {
@@ -32,7 +35,7 @@
   /* height: 80vh; */
   width: 90%;
   margin: auto;
-  background-color: #242427;
+  background: #91834c20;
   box-shadow: 0px 2.46818px 22.2136px -7.40453px rgb(0 0 0 / 25%);
   border-radius: 30.2352px;
   margin-top: 25vh;
@@ -41,7 +44,7 @@
 .form-control {
   padding: 4%;
   color: #d9d9d9;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -70,7 +73,7 @@
 }
 .btn1 {
   font-weight: 600;
-  background-color: #837c6b;
+  background-color: #91834c;
   text-decoration: none;
   padding: 1.5% 7%;
   margin: 6% 0 3% 5%;
